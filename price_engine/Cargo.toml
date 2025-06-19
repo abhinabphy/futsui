@@ -1,0 +1,20 @@
+[package]
+name = "price_engine"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "test"
+path = "src/test.rs"
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+rand = "0.9.1"
+anyhow="*"
+tracing="*"
+serde_json="*"
+pyth-sdk = "0.8.0"
+pyth-hermes-client = { version = "0.5.2", features = ["stream"] }
+futures = "0.3.30"
+blackscholes = "0.24.0"
